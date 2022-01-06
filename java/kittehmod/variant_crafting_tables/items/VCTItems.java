@@ -108,7 +108,7 @@ public class VCTItems
     		return tab;
     	}
     	else {
-    		return tab;
+    		return null;
     	}
     }
     
