@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "crafting_table",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "habitat:fairy_ring_mushroom_planks"
+    }
+  },
+  "result": {
+    "item": "variant_crafting_tables:fairy_ring_mushroom_crafting_table"
+  },
+  "conditions": [
+    {
+      "type": "variant_crafting_tables:habitat_mod_installed"
+    }
+  ]
+}

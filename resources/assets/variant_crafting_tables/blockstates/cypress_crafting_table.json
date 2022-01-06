@@ -1,0 +1,5 @@
+{
+	"variants": {
+		"": { "model": "variant_crafting_tables:block/cypress_crafting_table" }
+	}
+}

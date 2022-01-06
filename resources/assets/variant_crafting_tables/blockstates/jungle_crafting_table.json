@@ -1,0 +1,5 @@
+{
+	"variants": {
+		"": { "model": "variant_crafting_tables:block/jungle_crafting_table" }
+	}
+}
