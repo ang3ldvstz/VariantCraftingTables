@@ -90,7 +90,7 @@ public class VCTBlocks
  	// Enhanced Mushrooms
  	public static final RegistryObject<Block> BROWN_MUSHROOM_CRAFTING_TABLE = BLOCKS.register("brown_mushroom_crafting_table", () -> new VCTCraftingTableBlock(AbstractBlock.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));
  	public static final RegistryObject<Block> RED_MUSHROOM_CRAFTING_TABLE = BLOCKS.register("red_mushroom_crafting_table", () -> new VCTCraftingTableBlock(AbstractBlock.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));
- 	public static final RegistryObject<Block> GLOWSHROOM_CRAFTING_TABLE = BLOCKS.register("glowshroom_crafting_table", () -> new VCTCraftingTableBlock(AbstractBlock.Properties.of(Material.WOOD).lightLevel((ll) -> { return 11; }).strength(2.5F).sound(SoundType.WOOD)));
+ 	public static final RegistryObject<Block> GLOWSHROOM_CRAFTING_TABLE = BLOCKS.register("glowshroom_crafting_table", () -> new VCTCraftingTableBlock(AbstractBlock.Properties.of(Material.WOOD).noOcclusion().lightLevel((ll) -> { return 11; }).strength(2.5F).sound(SoundType.WOOD)));
 
 	/* Miscellaneous Mods */
  	// Darker Depths
