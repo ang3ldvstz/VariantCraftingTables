@@ -94,7 +94,7 @@ public class VCTBlocks
 
 	/* Miscellaneous Mods */
  	// Darker Depths
- 	public static final RegistryObject<Block> PETRIFIED_CRAFTING_TABLE = BLOCKS.register("petrified_crafting_table", () -> new VCTCraftingTableBlock(AbstractBlock.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));
+ 	public static final RegistryObject<Block> PETRIFIED_CRAFTING_TABLE = BLOCKS.register("petrified_crafting_table", () -> new VCTCraftingTableBlock(AbstractBlock.Properties.of(Material.STONE).strength(4.0F).sound(SoundType.WOOD)));
     
  	// Habitat
  	public static final RegistryObject<Block> FAIRY_RING_MUSHROOM_CRAFTING_TABLE = BLOCKS.register("fairy_ring_mushroom_crafting_table", () -> new VCTCraftingTableBlock(AbstractBlock.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));

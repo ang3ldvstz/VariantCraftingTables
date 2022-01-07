@@ -30,7 +30,7 @@ public class TwilightForestModInstalledCondition implements ICondition
 		private final ResourceLocation location;
 
 		public Serializer() {
-			this.location = new ResourceLocation(VariantCraftingTablesMod.MOD_ID, "twilightforest_mod_installed");
+			this.location = new ResourceLocation(VariantCraftingTablesMod.MOD_ID, "twilight_forest_mod_installed");
 		}
 
 		@Override
