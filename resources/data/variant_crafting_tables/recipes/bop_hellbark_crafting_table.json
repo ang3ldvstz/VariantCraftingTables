@@ -15,7 +15,7 @@
   },
   "conditions": [
     {
-      "type": "variant_crafting_tables:environmental_mod_installed"
+      "type": "variant_crafting_tables:biomesoplenty_mod_installed"
     }
   ]
 }

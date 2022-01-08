@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "atmospheric:yucca_planks"
+            "items": [ "atmospheric:yucca_planks" ]
           }
         ]
       }

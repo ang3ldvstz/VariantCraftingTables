@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "twilightforest:twilight_oak_planks"
+            "items": [ "twilightforest:twilight_oak_planks" ]
           }
         ]
       }

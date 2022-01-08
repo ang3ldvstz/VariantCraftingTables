@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "environmental:wisteria_planks"
+            "items": [ "environmental:wisteria_planks" ]
           }
         ]
       }

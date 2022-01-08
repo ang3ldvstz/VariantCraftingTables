@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "environmental:willow_planks"
+            "items": [ "environmental:willow_planks" ]
           }
         ]
       }

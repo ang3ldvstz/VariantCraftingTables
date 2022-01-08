@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "abundance:jacaranda_planks"
+            "items": [ "abundance:jacaranda_planks" ]
           }
         ]
       }

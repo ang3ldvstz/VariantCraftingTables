@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "upgrade_aquatic:driftwood_planks"
+            "items": [ "upgrade_aquatic:driftwood_planks" ]
           }
         ]
       }

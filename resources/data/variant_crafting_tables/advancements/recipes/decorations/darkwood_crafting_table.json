@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "twilightforest:dark_planks"
+            "items": [ "twilightforest:dark_planks" ]
           }
         ]
       }

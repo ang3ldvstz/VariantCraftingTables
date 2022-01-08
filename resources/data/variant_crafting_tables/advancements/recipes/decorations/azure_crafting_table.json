@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "outer_end:azure_planks"
+            "items": [ "outer_end:azure_planks" ]
           }
         ]
       }

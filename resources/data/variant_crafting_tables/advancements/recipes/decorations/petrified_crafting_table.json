@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "darkerdepths:petrified_planks"
+            "items": [ "darkerdepths:petrified_planks" ]
           }
         ]
       }

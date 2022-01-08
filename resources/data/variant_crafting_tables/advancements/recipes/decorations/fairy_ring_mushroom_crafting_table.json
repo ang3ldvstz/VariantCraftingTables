@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "habitat:fairy_ring_mushroom_planks"
+            "items": [ "habitat:fairy_ring_mushroom_planks" ]
           }
         ]
       }

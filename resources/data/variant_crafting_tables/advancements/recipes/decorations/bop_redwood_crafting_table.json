@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "biomesoplenty:redwood_planks"
+            "items": [ "biomesoplenty:redwood_planks" ]
           }
         ]
       }

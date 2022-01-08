@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "enhanced_mushrooms:brown_mushroom_planks"
+            "items": [ "enhanced_mushrooms:brown_mushroom_planks" ]
           }
         ]
       }

@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "atmospheric:kousa_planks"
+            "items": [ "atmospheric:kousa_planks" ]
           }
         ]
       }

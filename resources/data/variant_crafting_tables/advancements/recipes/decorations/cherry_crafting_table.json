@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "environmental:cherry_planks"
+            "items": [ "environmental:cherry_planks" ]
           }
         ]
       }

@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "atmospheric:aspen_planks"
+            "items": [ "atmospheric:aspen_planks" ]
           }
         ]
       }

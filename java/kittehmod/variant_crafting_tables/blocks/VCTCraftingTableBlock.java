@@ -1,27 +1,26 @@
 package kittehmod.variant_crafting_tables.blocks;
 
-import kittehmod.variant_crafting_tables.container.VCTWorkbenchContainer;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.CraftingTableBlock;
-import net.minecraft.block.material.Material;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.container.INamedContainerProvider;
-import net.minecraft.inventory.container.SimpleNamedContainerProvider;
+import kittehmod.variant_crafting_tables.container.VCTCraftingMenu;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.stats.Stats;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Direction;
-import net.minecraft.util.Hand;
-import net.minecraft.util.IWorldPosCallable;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.World;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.SimpleMenuProvider;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.CraftingTableBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.phys.BlockHitResult;
 
 public class VCTCraftingTableBlock extends CraftingTableBlock
 {
-	public static final ITextComponent TITLE = new TranslationTextComponent("container.crafting");
+	public static final Component TITLE = new TranslatableComponent("container.crafting");
 	
 	public VCTCraftingTableBlock(Properties properties) {
 		super(properties);
@@ -31,26 +30,26 @@ public class VCTCraftingTableBlock extends CraftingTableBlock
      * Called upon block activation (right click on the block.)
      */
     @Override
-    public ActionResultType use(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
+    public InteractionResult use(BlockState state, Level worldIn, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit)
     {
     	if (worldIn.isClientSide) {
-    		return ActionResultType.SUCCESS;
+    		return InteractionResult.SUCCESS;
     	} else {
     		player.openMenu(state.getMenuProvider(worldIn, pos));
     		player.awardStat(Stats.INTERACT_WITH_CRAFTING_TABLE);
-    		return ActionResultType.CONSUME;
+    		return InteractionResult.CONSUME;
     	}
     }
     
     @Override
-    public INamedContainerProvider getMenuProvider(BlockState state, World worldIn, BlockPos pos) {
-        return new SimpleNamedContainerProvider((id, inventory, player) -> {
-           return new VCTWorkbenchContainer(id, inventory, IWorldPosCallable.create(worldIn, pos), this.getBlock());
+    public MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {
+        return new SimpleMenuProvider((id, inventory, player) -> {
+           return new VCTCraftingMenu(id, inventory, this);
         }, TITLE);
     }
     
     @Override
-    public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+    public int getFlammability(BlockState state, BlockGetter getter, BlockPos pos, Direction face) {
     	if (this.material == Material.NETHER_WOOD) {
     		return -1; // Can't burn.
     	}
@@ -60,7 +59,7 @@ public class VCTCraftingTableBlock extends CraftingTableBlock
     }
     
     @Override
-    public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+    public int getFireSpreadSpeed(BlockState state, BlockGetter getter, BlockPos pos, Direction face) {
     	if (this.material == Material.NETHER_WOOD) {
     		return -1; // Can't catch fire.
     	}

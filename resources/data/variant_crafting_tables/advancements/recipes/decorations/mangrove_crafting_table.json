@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "twilightforest:mangrove_planks"
+            "items": [ "twilightforest:mangrove_planks" ]
           }
         ]
       }

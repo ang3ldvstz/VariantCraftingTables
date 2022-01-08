@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "abundance:redbud_planks"
+            "items": [ "abundance:redbud_planks" ]
           }
         ]
       }

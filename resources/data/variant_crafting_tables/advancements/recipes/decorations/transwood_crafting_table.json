@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "twilightforest:trans_planks"
+            "items": [ "twilightforest:transformation_planks" ]
           }
         ]
       }

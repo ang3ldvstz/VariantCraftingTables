@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "twilightforest:mine_planks"
+            "items": [ "twilightforest:mining_planks" ]
           }
         ]
       }

@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "biomesoplenty:palm_planks"
+            "items": [ "biomesoplenty:palm_planks" ]
           }
         ]
       }

@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "atmospheric:morado_planks"
+            "items": [ "atmospheric:morado_planks" ]
           }
         ]
       }

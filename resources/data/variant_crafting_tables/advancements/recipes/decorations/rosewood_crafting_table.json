@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "atmospheric:rosewood_planks"
+            "items": [ "atmospheric:rosewood_planks" ]
           }
         ]
       }

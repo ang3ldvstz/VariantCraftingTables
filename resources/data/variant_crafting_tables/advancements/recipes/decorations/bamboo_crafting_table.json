@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "bamboo_blocks:bamboo_planks"
+            "items": [ "bamboo_blocks:bamboo_planks" ]
           }
         ]
       }

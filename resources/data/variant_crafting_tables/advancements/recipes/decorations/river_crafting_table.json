@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "upgrade_aquatic:river_planks"
+            "items": [ "upgrade_aquatic:river_planks" ]
           }
         ]
       }

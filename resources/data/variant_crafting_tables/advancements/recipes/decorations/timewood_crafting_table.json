@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "twilightforest:time_planks"
+            "items": [ "twilightforest:time_planks" ]
           }
         ]
       }

@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "bayou_blues:cypress_planks"
+            "items": [ "bayou_blues:cypress_planks" ]
           }
         ]
       }
