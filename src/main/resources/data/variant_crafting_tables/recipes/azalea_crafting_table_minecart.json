@@ -19,7 +19,8 @@
   },
   "conditions": [
     {
-      "type": "variant_crafting_tables:caverns_and_chasms_mod_installed"
+      "type": "forge:mod_loaded",
+      "modid": "caverns_and_chasms"
     }
   ]
 }
