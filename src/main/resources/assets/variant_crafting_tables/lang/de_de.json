@@ -60,7 +60,14 @@
 "block.variant_crafting_tables.red_mushroom_crafting_table": "Rotpilz Werkbank",
 "block.variant_crafting_tables.glowshroom_crafting_table": "Glühpilz Werkbank",
 
+"block.variant_crafting_tables.twisted_crafting_table": "Verdrehte Werkbank",
+
+"block.variant_crafting_tables.ba_azalea_crafting_table": "Azalee Werkbank",
+"block.variant_crafting_tables.ba_flowering_azalea_crafting_table": "Blüte Azalee Werkbank",
+
 "block.variant_crafting_tables.petrified_crafting_table": "Versteinerte Werkbank",
+
+"block.variant_crafting_tables.coconut_crafting_table": "Kokosnuss Werkbank",
 
 "block.variant_crafting_tables.fairy_ring_mushroom_crafting_table": "Feenring Pilz Werkbank",
 
@@ -73,6 +80,11 @@
 "block.variant_crafting_tables.protojuniperoxylon_crafting_table": "Protojuniperoxylon Werkbank",
 "block.variant_crafting_tables.protopiceoxylon_crafting_table": "Protopicoxylon Werkbank",
 "block.variant_crafting_tables.zamites_crafting_table": "Zamites Werkbank",
+
+"block.variant_crafting_tables.quark_azalea_crafting_table": "Azalee Werkbank",
+"block.variant_crafting_tables.quark_blossom_crafting_table": "Blüte Werkbank",
+
+"block.variant_crafting_tables.mangrove_crafting_table": "Mangrove Werkbank",
 
 "item.variant_crafting_tables.oak_crafting_table_minecart": "Lore mit Eichenholz Werkbank",
 "item.variant_crafting_tables.spruce_crafting_table_minecart": "Lore mit Fichtenholz Werkbank",
@@ -135,7 +147,14 @@
 "item.variant_crafting_tables.red_mushroom_crafting_table_minecart": "Lore mit Rotpilz Werkbank",
 "item.variant_crafting_tables.glowshroom_crafting_table_minecart": "Lore mit Glühpilz Werkbank",
 
+"item.variant_crafting_tables.twisted_crafting_table_minecart": "Lore mit Verdrehte Werkbank",
+
+"item.variant_crafting_tables.ba_azalea_crafting_table_minecart": "Lore mit Azalee Werkbank",
+"item.variant_crafting_tables.ba_flowering_azalea_crafting_table_minecart": "Lore mit Blüte Azalee Werkbank",
+
 "item.variant_crafting_tables.petrified_crafting_table_minecart": "Lore mit Versteinerte Werkbank",
+
+"item.variant_crafting_tables.coconut_crafting_table_minecart": "Lore mit Kokosnuss Werkbank",
 
 "item.variant_crafting_tables.fairy_ring_mushroom_crafting_table_minecart": "Lore mit Feenring Pilz Werkbank",
 
@@ -147,5 +166,10 @@
 "item.variant_crafting_tables.metasequoia_crafting_table_minecart": "Lore mit Metasequoia Werkbank",
 "item.variant_crafting_tables.protojuniperoxylon_crafting_table_minecart": "Lore mit Protojuniperoxylon Werkbank",
 "item.variant_crafting_tables.protopiceoxylon_crafting_table_minecart": "Lore mit Protopicoxylon Werkbank",
-"item.variant_crafting_tables.zamites_crafting_table_minecart": "Lore mit Zamites Werkbank"
+"item.variant_crafting_tables.zamites_crafting_table_minecart": "Lore mit Zamites Werkbank",
+
+"item.variant_crafting_tables.quark_azalea_crafting_table_minecart": "Lore mit Azalee Werkbank",
+"item.variant_crafting_tables.quark_blossom_crafting_table_minecart": "Lore mit Blüte Werkbank",
+
+"item.variant_crafting_tables.mangrove_crafting_table_minecart": "Lore mit Mangrove Werkbank"
 }

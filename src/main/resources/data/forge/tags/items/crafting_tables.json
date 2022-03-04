@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "minecraft:crafting_table",
     "variant_crafting_tables:spruce_crafting_table",
     "variant_crafting_tables:birch_crafting_table",
     "variant_crafting_tables:jungle_crafting_table",
@@ -41,8 +42,6 @@
     
     "variant_crafting_tables:bamboo_crafting_table",
     
-    "variant_crafting_tables:azalea_crafting_table",
-    
     "variant_crafting_tables:poise_crafting_table",
     
     "variant_crafting_tables:cherry_crafting_table",
@@ -61,7 +60,14 @@
     "variant_crafting_tables:red_mushroom_crafting_table",
     "variant_crafting_tables:glowshroom_crafting_table",
     
+    "variant_crafting_tables:twisted_crafting_table",
+    
+    "variant_crafting_tables:ba_azalea_crafting_table",
+    "variant_crafting_tables:ba_flowering_azalea_crafting_table",
+    
     "variant_crafting_tables:petrified_crafting_table",
+
+    "variant_crafting_tables:coconut_crafting_table",
     
     "variant_crafting_tables:fairy_ring_mushroom_crafting_table",
     
@@ -74,8 +80,10 @@
     "variant_crafting_tables:protojuniperoxylon_crafting_table",
     "variant_crafting_tables:protopiceoxylon_crafting_table",
     "variant_crafting_tables:zamites_crafting_table",
-
+    
+    "variant_crafting_tables:quark_azalea_crafting_table",
+    "variant_crafting_tables:quark_blossom_crafting_table",
+    
     "variant_crafting_tables:mangrove_crafting_table"
-
   ]
 }

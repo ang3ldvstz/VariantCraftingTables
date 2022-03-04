@@ -60,7 +60,14 @@
 "block.variant_crafting_tables.red_mushroom_crafting_table": "Red Mushroom Crafting Table",
 "block.variant_crafting_tables.glowshroom_crafting_table": "Glowshroom Crafting Table",
 
+"block.variant_crafting_tables.twisted_crafting_table": "Twisted Crafting Table",
+
+"block.variant_crafting_tables.ba_azalea_crafting_table": "Azalea Crafting Table",
+"block.variant_crafting_tables.ba_flowering_azalea_crafting_table": "Flowering Azalea Crafting Table",
+
 "block.variant_crafting_tables.petrified_crafting_table": "Petrified Crafting Table",
+
+"block.variant_crafting_tables.coconut_crafting_table": "Coconut Crafting Table",
 
 "block.variant_crafting_tables.fairy_ring_mushroom_crafting_table": "Fairy Ring Mushroom Crafting Table",
 
@@ -73,6 +80,9 @@
 "block.variant_crafting_tables.protojuniperoxylon_crafting_table": "Protojuniperoxylon Crafting Table",
 "block.variant_crafting_tables.protopiceoxylon_crafting_table": "Protopiceoxylon Crafting Table",
 "block.variant_crafting_tables.zamites_crafting_table": "Zamites Crafting Table",
+
+"block.variant_crafting_tables.quark_azalea_crafting_table": "Azalea Crafting Table",
+"block.variant_crafting_tables.quark_blossom_crafting_table": "Blossom Crafting Table",
 
 "block.variant_crafting_tables.mangrove_crafting_table": "Mangrove Crafting Table",
 
@@ -137,7 +147,14 @@
 "item.variant_crafting_tables.red_mushroom_crafting_table_minecart": "Minecart with Red Mushroom Crafting Table",
 "item.variant_crafting_tables.glowshroom_crafting_table_minecart": "Minecart with Glowshroom Crafting Table",
 
+"item.variant_crafting_tables.twisted_crafting_table_minecart": "Minecart with Twisted Crafting Table",
+
+"item.variant_crafting_tables.ba_azalea_crafting_table_minecart": "Minecart with Azalea Crafting Table",
+"item.variant_crafting_tables.ba_flowering_azalea_crafting_table_minecart": "Minecart with Flowering Azalea Crafting Table",
+
 "item.variant_crafting_tables.petrified_crafting_table_minecart": "Minecart with Petrified Crafting Table",
+
+"item.variant_crafting_tables.coconut_crafting_table_minecart": "Minecart with Coconut Crafting Table",
 
 "item.variant_crafting_tables.fairy_ring_mushroom_crafting_table_minecart": "Minecart with Fairy Ring Mushroom Crafting Table",
 
@@ -150,6 +167,9 @@
 "item.variant_crafting_tables.protojuniperoxylon_crafting_table_minecart": "Minecart with Protojuniperoxylon Crafting Table",
 "item.variant_crafting_tables.protopiceoxylon_crafting_table_minecart": "Minecart with Protopiceoxylon Crafting Table",
 "item.variant_crafting_tables.zamites_crafting_table_minecart": "Minecart with Zamites Crafting Table",
+
+"item.variant_crafting_tables.quark_azalea_crafting_table_minecart": "Minecart with Azalea Crafting Table",
+"item.variant_crafting_tables.quark_blossom_crafting_table_minecart": "Minecart with Blossom Crafting Table",
 
 "item.variant_crafting_tables.mangrove_crafting_table_minecart": "Minecart with Mangrove Crafting Table"
 }

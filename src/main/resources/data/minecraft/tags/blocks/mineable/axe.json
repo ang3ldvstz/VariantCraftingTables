@@ -23,7 +23,7 @@
     
     "variant_crafting_tables:canopy_crafting_table",
     "variant_crafting_tables:darkwood_crafting_table",
-    "variant_crafting_tables:mangrove_crafting_table",
+    "variant_crafting_tables:twilight_mangrove_crafting_table",
     "variant_crafting_tables:minewood_crafting_table",
     "variant_crafting_tables:sortingwood_crafting_table",
     "variant_crafting_tables:timewood_crafting_table",
@@ -60,6 +60,13 @@
     "variant_crafting_tables:brown_mushroom_crafting_table",
     "variant_crafting_tables:red_mushroom_crafting_table",
     "variant_crafting_tables:glowshroom_crafting_table",
+
+    "variant_crafting_tables:twisted_crafting_table",
+    
+    "variant_crafting_tables:ba_azalea_crafting_table",
+    "variant_crafting_tables:ba_flowering_azalea_crafting_table",
+    
+    "variant_crafting_tables:coconut_crafting_table",
     
     "variant_crafting_tables:fairy_ring_mushroom_crafting_table",
     
@@ -71,6 +78,11 @@
     "variant_crafting_tables:metasequoia_crafting_table",
     "variant_crafting_tables:protojuniperoxylon_crafting_table",
     "variant_crafting_tables:protopiceoxylon_crafting_table",
-    "variant_crafting_tables:zamites_crafting_table"
+    "variant_crafting_tables:zamites_crafting_table",
+    
+    "variant_crafting_tables:quark_azalea_crafting_table",
+    "variant_crafting_tables:quark_blossom_crafting_table",
+    
+    "variant_crafting_tables:mangrove_crafting_table"
   ]
 }

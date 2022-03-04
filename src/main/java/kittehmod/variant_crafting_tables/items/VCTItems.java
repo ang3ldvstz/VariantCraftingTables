@@ -8,10 +8,12 @@ import kittehmod.variant_crafting_tables.entities.MinecartCraftingTable.Crafting
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.loading.FMLEnvironment;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -158,15 +160,32 @@ public class VCTItems
 	public static final RegistryObject<Item> GLOWSHROOM_CRAFTING_TABLE_MINECART = ITEMS.register("glowshroom_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("enhanced_mushrooms", CreativeModeTab.TAB_TRANSPORTATION)).stacksTo(1), CraftingTableType.GLOWSHROOM));
 	
 	/* Miscellaneous Mods */
+	// Architects Palette
+	public static final RegistryObject<Item> TWISTED_CRAFTING_TABLE = ITEMS.register("twisted_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.TWISTED_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("architects_palette", CreativeModeTab.TAB_DECORATIONS))));
+
+	public static final RegistryObject<Item> TWISTED_CRAFTING_TABLE_MINECART = ITEMS.register("twisted_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("architects_palette", CreativeModeTab.TAB_TRANSPORTATION)).stacksTo(1), CraftingTableType.TWISTED));
+	
+	// Better Azalea
+	public static final RegistryObject<Item> BA_AZALEA_CRAFTING_TABLE = ITEMS.register("ba_azalea_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.BA_AZALEA_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("azalea", CreativeModeTab.TAB_DECORATIONS))));
+	public static final RegistryObject<Item> BA_FLOWERING_AZALEA_CRAFTING_TABLE = ITEMS.register("ba_flowering_azalea_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.BA_FLOWERING_AZALEA_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("azalea", CreativeModeTab.TAB_DECORATIONS))));
+
+	public static final RegistryObject<Item> BA_AZALEA_CRAFTING_TABLE_MINECART = ITEMS.register("ba_azalea_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("azalea", CreativeModeTab.TAB_TRANSPORTATION)).stacksTo(1), CraftingTableType.BA_AZALEA));
+	public static final RegistryObject<Item> BA_FLOWERING_AZALEA_CRAFTING_TABLE_MINECART = ITEMS.register("ba_flowering_azalea_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("azalea", CreativeModeTab.TAB_TRANSPORTATION)).stacksTo(1), CraftingTableType.BA_FLOWERING_AZALEA));
+
 	// Darker Depths
 	public static final RegistryObject<Item> PETRIFIED_CRAFTING_TABLE = ITEMS.register("petrified_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.PETRIFIED_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("darkerdepths", CreativeModeTab.TAB_DECORATIONS))));
 
 	public static final RegistryObject<Item> PETRIFIED_CRAFTING_TABLE_MINECART = ITEMS.register("petrified_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("darkerdepths", CreativeModeTab.TAB_TRANSPORTATION)).stacksTo(1), CraftingTableType.PETRIFIED));
 
+	// Ecologics
+	public static final RegistryObject<Item> COCONUT_CRAFTING_TABLE = ITEMS.register("coconut_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.COCONUT_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("ecologics", getTabWithMatchingName("ecologics")))));
+
+	public static final RegistryObject<Item> COCONUT_CRAFTING_TABLE_MINECART = ITEMS.register("coconut_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("ecologics", getTabWithMatchingName("ecologics"))).stacksTo(1), CraftingTableType.COCONUT));
+	
 	// Habitat
 	public static final RegistryObject<Item> FAIRY_RING_MUSHROOM_CRAFTING_TABLE = ITEMS.register("fairy_ring_mushroom_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.FAIRY_RING_MUSHROOM_CRAFTING_TABLE.get(), new Item.Properties().tab(ModList.get().isLoaded("enhanced_mushrooms") ? conditionallyAddTab("habitat", CreativeModeTab.TAB_DECORATIONS) : null)));
 
-	public static final RegistryObject<Item> FAIRY_RING_MUSHROOM_CRAFTING_TABLE_MINECART = ITEMS.register("fairy_ring_mushroom_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("enhanced_mushrooms", CreativeModeTab.TAB_TRANSPORTATION)).stacksTo(1), CraftingTableType.FAIRY_RING_MUSHROOM));
+	public static final RegistryObject<Item> FAIRY_RING_MUSHROOM_CRAFTING_TABLE_MINECART = ITEMS.register("fairy_ring_mushroom_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(ModList.get().isLoaded("enhanced_mushrooms") ? conditionallyAddTab("habitat", CreativeModeTab.TAB_TRANSPORTATION) : null).stacksTo(1), CraftingTableType.FAIRY_RING_MUSHROOM));
 	
 	// Outer End
 	public static final RegistryObject<Item> AZURE_CRAFTING_TABLE = ITEMS.register("azure_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.AZURE_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("outer_end", CreativeModeTab.TAB_DECORATIONS))));
@@ -190,6 +209,13 @@ public class VCTItems
 	public static final RegistryObject<Item> PROTOPICEOXYLON_CRAFTING_TABLE_MINECART = ITEMS.register("protopiceoxylon_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("prehistoricfauna", getTabWithMatchingName("prehistoric_misc_tab"))).stacksTo(1), CraftingTableType.PROTOPICEOXYLON));
 	public static final RegistryObject<Item> ZAMITES_CRAFTING_TABLE_MINECART = ITEMS.register("zamites_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("prehistoricfauna", getTabWithMatchingName("prehistoric_misc_tab"))).stacksTo(1), CraftingTableType.ZAMITES));
 	
+	// Quark
+	public static final RegistryObject<Item> QUARK_AZALEA_CRAFTING_TABLE = ITEMS.register("quark_azalea_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.BA_AZALEA_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("azalea", CreativeModeTab.TAB_DECORATIONS))));
+	public static final RegistryObject<Item> QUARK_BLOSSOM_CRAFTING_TABLE = ITEMS.register("quark_blossom_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.BA_FLOWERING_AZALEA_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("azalea", CreativeModeTab.TAB_DECORATIONS))));
+
+	public static final RegistryObject<Item> QUARK_AZALEA_CRAFTING_TABLE_MINECART = ITEMS.register("quark_azalea_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("azalea", CreativeModeTab.TAB_TRANSPORTATION)).stacksTo(1), CraftingTableType.QUARK_AZALEA));
+	public static final RegistryObject<Item> QUARK_BLOSSOM_CRAFTING_TABLE_MINECART = ITEMS.register("quark_blossom_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("azalea", CreativeModeTab.TAB_TRANSPORTATION)).stacksTo(1), CraftingTableType.QUARK_BLOSSOM));
+	
 	// The Wild Update (Backport)
 	public static final RegistryObject<Item> MANGROVE_CRAFTING_TABLE = ITEMS.register("mangrove_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.MANGROVE_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("the_wild_update", CreativeModeTab.TAB_DECORATIONS))));
 
@@ -207,6 +233,9 @@ public class VCTItems
     
     private static CreativeModeTab getTabWithMatchingName(String tabName) {
     	CreativeModeTab tab = null;
+    	if (FMLEnvironment.dist == Dist.DEDICATED_SERVER) { // Check to make sure the code doesn't advance on server to prevent crashes.
+    		return null;
+    	}
     	for (CreativeModeTab tempTab : CreativeModeTab.TABS) {
     		if (tempTab.getDisplayName() instanceof TranslatableComponent) { // Check if it's the correct class to avoid crashes.
 	    		TranslatableComponent tabComp = (TranslatableComponent) tempTab.getDisplayName();

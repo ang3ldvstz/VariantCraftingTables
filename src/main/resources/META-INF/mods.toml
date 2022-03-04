@@ -51,28 +51,28 @@ description='''This mod adds the variant Crafting Tables for each of the vanilla
 [[dependencies.variant_crafting_tables]] #optional
     modId="forge" #mandatory
     mandatory=true #mandatory
-    versionRange="[39,)" #mandatory
+    versionRange="[40.0.2,)" #mandatory
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.variant_crafting_tables]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18.1,1.19)"
+    versionRange="[1.18.2,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.variant_crafting_tables]]
     modId="biomesoplenty"
     mandatory=false
-    versionRange="[1.18.1,)"
+    versionRange="[1.18.2,)"
     ordering="AFTER"
     side="BOTH"
     
 [[dependencies.variant_crafting_tables]]
     modId="twilightforest"
     mandatory=false
-    versionRange="[1.18.1,)"
+    versionRange="[1.18.2,)"
     ordering="AFTER"
     side="BOTH"
     
@@ -128,21 +128,21 @@ description='''This mod adds the variant Crafting Tables for each of the vanilla
 [[dependencies.variant_crafting_tables]]
     modId="abundance"
     mandatory=false
-    versionRange="[1.16.5-1.0.5,)"
+    versionRange="[1.18.2,)"
     ordering="AFTER"
     side="BOTH"
     
 [[dependencies.variant_crafting_tables]]
     modId="bayou_blues"
     mandatory=false
-    versionRange="[1.16.5-1.0.5,)"
+    versionRange="[1.18.2,)"
     ordering="AFTER"
     side="BOTH"
     
 [[dependencies.variant_crafting_tables]]
     modId="enhanced_mushrooms"
     mandatory=false
-    versionRange="[1.18.1,)"
+    versionRange="[1.18.2,)"
     ordering="AFTER"
     side="BOTH"
 
@@ -164,5 +164,12 @@ description='''This mod adds the variant Crafting Tables for each of the vanilla
     modId="outer_end"
     mandatory=false
     versionRange="[0.2,)"
+    ordering="AFTER"
+    side="BOTH"
+    
+[[dependencies.variant_crafting_tables]]
+    modId="create"
+    mandatory=false
+    versionRange="[v0.4,)"
     ordering="AFTER"
     side="BOTH"
