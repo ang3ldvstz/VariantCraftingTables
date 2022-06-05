@@ -63,10 +63,10 @@
 
     "variant_crafting_tables:twisted_crafting_table",
     
-    "variant_crafting_tables:ba_azalea_crafting_table",
-    "variant_crafting_tables:ba_flowering_azalea_crafting_table",
-    
-    "variant_crafting_tables:coconut_crafting_table",
+    "variant_crafting_tables:eco_azalea_crafting_table",
+    "variant_crafting_tables:eco_flowering_azalea_crafting_table",
+    "variant_crafting_tables:eco_coconut_crafting_table",
+    "variant_crafting_tables:eco_walnut_crafting_table",
     
     "variant_crafting_tables:fairy_ring_mushroom_crafting_table",
     

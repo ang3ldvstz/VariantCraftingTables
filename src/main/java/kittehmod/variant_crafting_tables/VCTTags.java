@@ -7,5 +7,5 @@ import net.minecraft.world.level.block.Block;
 
 public class VCTTags
 {
-	public static final TagKey<Block> CRAFTING_TABLES = BlockTags.create(new ResourceLocation("forge", "crafting_tables"));
+	public static final TagKey<Block> CRAFTING_TABLES = BlockTags.create(new ResourceLocation("forge", "workbench"));
 }

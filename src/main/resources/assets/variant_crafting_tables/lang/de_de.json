@@ -62,12 +62,12 @@
 
 "block.variant_crafting_tables.twisted_crafting_table": "Verdrehte Werkbank",
 
-"block.variant_crafting_tables.ba_azalea_crafting_table": "Azalee Werkbank",
-"block.variant_crafting_tables.ba_flowering_azalea_crafting_table": "Blüte Azalee Werkbank",
-
 "block.variant_crafting_tables.petrified_crafting_table": "Versteinerte Werkbank",
 
-"block.variant_crafting_tables.coconut_crafting_table": "Kokosnuss Werkbank",
+"block.variant_crafting_tables.eco_azalea_crafting_table": "Lore mit Azalee Werkbank",
+"block.variant_crafting_tables.eco_flowering_azalea_crafting_table": "Lore mit Blüte Azalee Werkbank",
+"block.variant_crafting_tables.eco_coconut_crafting_table": "Lore mit Kokosnuss Werkbank",
+"block.variant_crafting_tables.eco_walnut_crafting_table": "Lore mit Nussbaum Werkbank",
 
 "block.variant_crafting_tables.fairy_ring_mushroom_crafting_table": "Feenring Pilz Werkbank",
 
@@ -83,6 +83,10 @@
 
 "block.variant_crafting_tables.quark_azalea_crafting_table": "Azalee Werkbank",
 "block.variant_crafting_tables.quark_blossom_crafting_table": "Blüte Werkbank",
+
+"item.variant_crafting_tables.grongle_crafting_table_minecart": "Grongle Werkbank",
+"item.variant_crafting_tables.smogstem_crafting_table_minecart": "Smogstem Werkbank",
+"item.variant_crafting_tables.wigglewood_crafting_table_minecart": "Wackelnholz Werkbank",
 
 "block.variant_crafting_tables.mangrove_crafting_table": "Mangrove Werkbank",
 
@@ -149,12 +153,12 @@
 
 "item.variant_crafting_tables.twisted_crafting_table_minecart": "Lore mit Verdrehte Werkbank",
 
-"item.variant_crafting_tables.ba_azalea_crafting_table_minecart": "Lore mit Azalee Werkbank",
-"item.variant_crafting_tables.ba_flowering_azalea_crafting_table_minecart": "Lore mit Blüte Azalee Werkbank",
-
 "item.variant_crafting_tables.petrified_crafting_table_minecart": "Lore mit Versteinerte Werkbank",
 
-"item.variant_crafting_tables.coconut_crafting_table_minecart": "Lore mit Kokosnuss Werkbank",
+"item.variant_crafting_tables.eco_azalea_crafting_table_minecart": "Lore mit Azalee Werkbank",
+"item.variant_crafting_tables.eco_flowering_azalea_crafting_table_minecart": "Lore mit Blüte Azalee Werkbank",
+"item.variant_crafting_tables.eco_coconut_crafting_table_minecart": "Lore mit Kokosnuss Werkbank",
+"item.variant_crafting_tables.eco_walnut_crafting_table_minecart": "Lore mit Nussbaum Werkbank",
 
 "item.variant_crafting_tables.fairy_ring_mushroom_crafting_table_minecart": "Lore mit Feenring Pilz Werkbank",
 
@@ -170,6 +174,10 @@
 
 "item.variant_crafting_tables.quark_azalea_crafting_table_minecart": "Lore mit Azalee Werkbank",
 "item.variant_crafting_tables.quark_blossom_crafting_table_minecart": "Lore mit Blüte Werkbank",
+
+"item.variant_crafting_tables.grongle_crafting_table_minecart": "Lore mit Grongle Werkbank",
+"item.variant_crafting_tables.smogstem_crafting_table_minecart": "Lore mit Smogstem Werkbank",
+"item.variant_crafting_tables.wigglewood_crafting_table_minecart": "Lore mit Wackelnholz Werkbank",
 
 "item.variant_crafting_tables.mangrove_crafting_table_minecart": "Lore mit Mangrove Werkbank"
 }

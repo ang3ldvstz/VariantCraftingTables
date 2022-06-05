@@ -20,7 +20,7 @@
             "items": [ "minecraft:minecart" ]
           },
           {
-            "tag": "forge:crafting_tables"
+            "tag": "forge:workbench"
           }
         ]
       }

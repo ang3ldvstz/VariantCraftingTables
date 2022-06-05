@@ -26,7 +26,7 @@ public class VariantCraftingTablesMod
     }
     
     private void setup(final FMLCommonSetupEvent event) {
-    	// Nothing here...
+    	MinecraftForge.EVENT_BUS.register(new VCTUpdater());
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {

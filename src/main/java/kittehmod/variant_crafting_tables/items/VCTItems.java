@@ -30,6 +30,7 @@ public class VCTItems
 	public static final RegistryObject<Item> DARK_OAK_CRAFTING_TABLE = ITEMS.register("dark_oak_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.DARK_OAK_CRAFTING_TABLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
 	public static final RegistryObject<Item> CRIMSON_CRAFTING_TABLE = ITEMS.register("crimson_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.CRIMSON_CRAFTING_TABLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
 	public static final RegistryObject<Item> WARPED_CRAFTING_TABLE = ITEMS.register("warped_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.WARPED_CRAFTING_TABLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+	//public static final RegistryObject<Item> MANGROVE_CRAFTING_TABLE = ITEMS.register("mangrove_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.MANGROVE_CRAFTING_TABLE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS))); // 1.19+
 	
 	public static final RegistryObject<Item> OAK_CRAFTING_TABLE_MINECART = ITEMS.register("oak_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(CreativeModeTab.TAB_TRANSPORTATION).stacksTo(1), CraftingTableType.OAK));
 	public static final RegistryObject<Item> SPRUCE_CRAFTING_TABLE_MINECART = ITEMS.register("spruce_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(CreativeModeTab.TAB_TRANSPORTATION).stacksTo(1), CraftingTableType.SPRUCE));
@@ -39,6 +40,7 @@ public class VCTItems
 	public static final RegistryObject<Item> DARK_OAK_CRAFTING_TABLE_MINECART = ITEMS.register("dark_oak_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(CreativeModeTab.TAB_TRANSPORTATION).stacksTo(1), CraftingTableType.DARK_OAK));
 	public static final RegistryObject<Item> CRIMSON_CRAFTING_TABLE_MINECART = ITEMS.register("crimson_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(CreativeModeTab.TAB_TRANSPORTATION).stacksTo(1), CraftingTableType.CRIMSON));
 	public static final RegistryObject<Item> WARPED_CRAFTING_TABLE_MINECART = ITEMS.register("warped_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(CreativeModeTab.TAB_TRANSPORTATION).stacksTo(1), CraftingTableType.WARPED));
+	//public static final RegistryObject<Item> MANGROVE_CRAFTING_TABLE_MINECART = ITEMS.register("mangrove_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(CreativeModeTab.TAB_TRANSPORTATION).stacksTo(1), CraftingTableType.MANGROVE)); // 1.19+
 
     /* The big, popular mods */
 	// Biomes o' Plenty
@@ -164,13 +166,6 @@ public class VCTItems
 	public static final RegistryObject<Item> TWISTED_CRAFTING_TABLE = ITEMS.register("twisted_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.TWISTED_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("architects_palette", CreativeModeTab.TAB_DECORATIONS))));
 
 	public static final RegistryObject<Item> TWISTED_CRAFTING_TABLE_MINECART = ITEMS.register("twisted_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("architects_palette", CreativeModeTab.TAB_TRANSPORTATION)).stacksTo(1), CraftingTableType.TWISTED));
-	
-	// Better Azalea
-	public static final RegistryObject<Item> BA_AZALEA_CRAFTING_TABLE = ITEMS.register("ba_azalea_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.BA_AZALEA_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("azalea", CreativeModeTab.TAB_DECORATIONS))));
-	public static final RegistryObject<Item> BA_FLOWERING_AZALEA_CRAFTING_TABLE = ITEMS.register("ba_flowering_azalea_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.BA_FLOWERING_AZALEA_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("azalea", CreativeModeTab.TAB_DECORATIONS))));
-
-	public static final RegistryObject<Item> BA_AZALEA_CRAFTING_TABLE_MINECART = ITEMS.register("ba_azalea_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("azalea", CreativeModeTab.TAB_TRANSPORTATION)).stacksTo(1), CraftingTableType.BA_AZALEA));
-	public static final RegistryObject<Item> BA_FLOWERING_AZALEA_CRAFTING_TABLE_MINECART = ITEMS.register("ba_flowering_azalea_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("azalea", CreativeModeTab.TAB_TRANSPORTATION)).stacksTo(1), CraftingTableType.BA_FLOWERING_AZALEA));
 
 	// Darker Depths
 	public static final RegistryObject<Item> PETRIFIED_CRAFTING_TABLE = ITEMS.register("petrified_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.PETRIFIED_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("darkerdepths", CreativeModeTab.TAB_DECORATIONS))));
@@ -178,9 +173,15 @@ public class VCTItems
 	public static final RegistryObject<Item> PETRIFIED_CRAFTING_TABLE_MINECART = ITEMS.register("petrified_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("darkerdepths", CreativeModeTab.TAB_TRANSPORTATION)).stacksTo(1), CraftingTableType.PETRIFIED));
 
 	// Ecologics
-	public static final RegistryObject<Item> COCONUT_CRAFTING_TABLE = ITEMS.register("coconut_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.COCONUT_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("ecologics", getTabWithMatchingName("ecologics")))));
+	public static final RegistryObject<Item> ECO_AZALEA_CRAFTING_TABLE = ITEMS.register("eco_azalea_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.ECO_AZALEA_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("ecologics", getTabWithMatchingName("ecologics")))));
+	public static final RegistryObject<Item> ECO_FLOWERING_AZALEA_CRAFTING_TABLE = ITEMS.register("eco_flowering_azalea_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.ECO_FLOWERING_AZALEA_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("ecologics", getTabWithMatchingName("ecologics")))));
+	public static final RegistryObject<Item> ECO_COCONUT_CRAFTING_TABLE = ITEMS.register("eco_coconut_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.ECO_COCONUT_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("ecologics", getTabWithMatchingName("ecologics")))));
+	public static final RegistryObject<Item> ECO_WALNUT_CRAFTING_TABLE = ITEMS.register("eco_walnut_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.ECO_WALNUT_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("ecologics", getTabWithMatchingName("ecologics")))));
 
-	public static final RegistryObject<Item> COCONUT_CRAFTING_TABLE_MINECART = ITEMS.register("coconut_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("ecologics", getTabWithMatchingName("ecologics"))).stacksTo(1), CraftingTableType.COCONUT));
+	public static final RegistryObject<Item> ECO_AZALEA_CRAFTING_TABLE_MINECART = ITEMS.register("eco_azalea_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("ecologics", getTabWithMatchingName("ecologics"))).stacksTo(1), CraftingTableType.ECO_AZALEA));
+	public static final RegistryObject<Item> ECO_FLOWERING_AZALEA_CRAFTING_TABLE_MINECART = ITEMS.register("eco_flowering_azalea_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("ecologics", getTabWithMatchingName("ecologics"))).stacksTo(1), CraftingTableType.ECO_FLOWERING_AZALEA));
+	public static final RegistryObject<Item> ECO_COCONUT_CRAFTING_TABLE_MINECART = ITEMS.register("eco_coconut_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("ecologics", getTabWithMatchingName("ecologics"))).stacksTo(1), CraftingTableType.ECO_COCONUT));
+	public static final RegistryObject<Item> ECO_WALNUT_CRAFTING_TABLE_MINECART = ITEMS.register("eco_walnut_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("ecologics", getTabWithMatchingName("ecologics"))).stacksTo(1), CraftingTableType.ECO_WALNUT));
 	
 	// Habitat
 	public static final RegistryObject<Item> FAIRY_RING_MUSHROOM_CRAFTING_TABLE = ITEMS.register("fairy_ring_mushroom_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.FAIRY_RING_MUSHROOM_CRAFTING_TABLE.get(), new Item.Properties().tab(ModList.get().isLoaded("enhanced_mushrooms") ? conditionallyAddTab("habitat", CreativeModeTab.TAB_DECORATIONS) : null)));
@@ -210,13 +211,22 @@ public class VCTItems
 	public static final RegistryObject<Item> ZAMITES_CRAFTING_TABLE_MINECART = ITEMS.register("zamites_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("prehistoricfauna", getTabWithMatchingName("prehistoric_misc_tab"))).stacksTo(1), CraftingTableType.ZAMITES));
 	
 	// Quark
-	public static final RegistryObject<Item> QUARK_AZALEA_CRAFTING_TABLE = ITEMS.register("quark_azalea_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.BA_AZALEA_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("azalea", CreativeModeTab.TAB_DECORATIONS))));
-	public static final RegistryObject<Item> QUARK_BLOSSOM_CRAFTING_TABLE = ITEMS.register("quark_blossom_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.BA_FLOWERING_AZALEA_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("azalea", CreativeModeTab.TAB_DECORATIONS))));
+	public static final RegistryObject<Item> QUARK_AZALEA_CRAFTING_TABLE = ITEMS.register("quark_azalea_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.QUARK_AZALEA_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("quark", CreativeModeTab.TAB_DECORATIONS))));
+	public static final RegistryObject<Item> QUARK_BLOSSOM_CRAFTING_TABLE = ITEMS.register("quark_blossom_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.QUARK_BLOSSOM_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("quark", CreativeModeTab.TAB_DECORATIONS))));
 
-	public static final RegistryObject<Item> QUARK_AZALEA_CRAFTING_TABLE_MINECART = ITEMS.register("quark_azalea_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("azalea", CreativeModeTab.TAB_TRANSPORTATION)).stacksTo(1), CraftingTableType.QUARK_AZALEA));
-	public static final RegistryObject<Item> QUARK_BLOSSOM_CRAFTING_TABLE_MINECART = ITEMS.register("quark_blossom_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("azalea", CreativeModeTab.TAB_TRANSPORTATION)).stacksTo(1), CraftingTableType.QUARK_BLOSSOM));
+	public static final RegistryObject<Item> QUARK_AZALEA_CRAFTING_TABLE_MINECART = ITEMS.register("quark_azalea_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("quark", CreativeModeTab.TAB_TRANSPORTATION)).stacksTo(1), CraftingTableType.QUARK_AZALEA));
+	public static final RegistryObject<Item> QUARK_BLOSSOM_CRAFTING_TABLE_MINECART = ITEMS.register("quark_blossom_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("quark", CreativeModeTab.TAB_TRANSPORTATION)).stacksTo(1), CraftingTableType.QUARK_BLOSSOM));
 	
-	// The Wild Update (Backport)
+	// Undergarden
+	public static final RegistryObject<Item> GRONGLE_CRAFTING_TABLE = ITEMS.register("grongle_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.GRONGLE_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("undergarden", getTabWithMatchingName("undergarden_group")))));
+	public static final RegistryObject<Item> SMOGSTEM_CRAFTING_TABLE = ITEMS.register("smogstem_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.SMOGSTEM_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("undergarden", getTabWithMatchingName("undergarden_group")))));
+	public static final RegistryObject<Item> WIGGLEWOOD_CRAFTING_TABLE = ITEMS.register("wigglewood_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.WIGGLEWOOD_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("undergarden", getTabWithMatchingName("undergarden_group")))));
+
+	public static final RegistryObject<Item> GRONGLE_CRAFTING_TABLE_MINECART = ITEMS.register("grongle_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("undergarden", getTabWithMatchingName("undergarden_group"))).stacksTo(1), CraftingTableType.GRONGLE));
+	public static final RegistryObject<Item> SMOGSTEM_CRAFTING_TABLE_MINECART = ITEMS.register("smogstem_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("undergarden", getTabWithMatchingName("undergarden_group"))).stacksTo(1), CraftingTableType.SMOGSTEM));
+	public static final RegistryObject<Item> WIGGLEWOOD_CRAFTING_TABLE_MINECART = ITEMS.register("wigglewood_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("undergarden", getTabWithMatchingName("undergarden_group"))).stacksTo(1), CraftingTableType.WIGGLEWOOD));
+	
+	// The Wild Update (Backport) This section will be moved to vanilla section in 1.19+.
 	public static final RegistryObject<Item> MANGROVE_CRAFTING_TABLE = ITEMS.register("mangrove_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.MANGROVE_CRAFTING_TABLE.get(), new Item.Properties().tab(conditionallyAddTab("the_wild_update", CreativeModeTab.TAB_DECORATIONS))));
 
 	public static final RegistryObject<Item> MANGROVE_CRAFTING_TABLE_MINECART = ITEMS.register("mangrove_crafting_table_minecart", () -> new CraftingTableMinecartItem(new Item.Properties().tab(conditionallyAddTab("the_wild_update", CreativeModeTab.TAB_TRANSPORTATION)).stacksTo(1), CraftingTableType.MANGROVE));

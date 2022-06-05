@@ -97,16 +97,15 @@ public class VCTBlocks
 	/* Miscellaneous Mods */
  	// Architects Palette
   	public static final RegistryObject<Block> TWISTED_CRAFTING_TABLE = BLOCKS.register("twisted_crafting_table", () -> new VCTCraftingTableBlock(Block.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));
-	
-  	// Better Azalea
- 	public static final RegistryObject<Block> BA_AZALEA_CRAFTING_TABLE = BLOCKS.register("ba_azalea_crafting_table", () -> new VCTCraftingTableBlock(Block.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));
- 	public static final RegistryObject<Block> BA_FLOWERING_AZALEA_CRAFTING_TABLE = BLOCKS.register("ba_flowering_azalea_crafting_table", () -> new VCTCraftingTableBlock(Block.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));
   	
  	// Darker Depths
  	public static final RegistryObject<Block> PETRIFIED_CRAFTING_TABLE = BLOCKS.register("petrified_crafting_table", () -> new VCTCraftingTableBlock(Block.Properties.of(Material.STONE).strength(4.0F).sound(SoundType.WOOD)));
     
  	// Ecologics
- 	public static final RegistryObject<Block> COCONUT_CRAFTING_TABLE = BLOCKS.register("coconut_crafting_table", () -> new VCTCraftingTableBlock(Block.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));
+ 	public static final RegistryObject<Block> ECO_AZALEA_CRAFTING_TABLE = BLOCKS.register("eco_azalea_crafting_table", () -> new VCTCraftingTableBlock(Block.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));
+ 	public static final RegistryObject<Block> ECO_FLOWERING_AZALEA_CRAFTING_TABLE = BLOCKS.register("eco_flowering_azalea_crafting_table", () -> new VCTCraftingTableBlock(Block.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));
+ 	public static final RegistryObject<Block> ECO_COCONUT_CRAFTING_TABLE = BLOCKS.register("eco_coconut_crafting_table", () -> new VCTCraftingTableBlock(Block.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));
+ 	public static final RegistryObject<Block> ECO_WALNUT_CRAFTING_TABLE = BLOCKS.register("eco_walnut_crafting_table", () -> new VCTCraftingTableBlock(Block.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));
  	
  	// Habitat
  	public static final RegistryObject<Block> FAIRY_RING_MUSHROOM_CRAFTING_TABLE = BLOCKS.register("fairy_ring_mushroom_crafting_table", () -> new VCTCraftingTableBlock(Block.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));
@@ -127,6 +126,11 @@ public class VCTBlocks
  	public static final RegistryObject<Block> QUARK_AZALEA_CRAFTING_TABLE = BLOCKS.register("quark_azalea_crafting_table", () -> new VCTCraftingTableBlock(Block.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));
  	public static final RegistryObject<Block> QUARK_BLOSSOM_CRAFTING_TABLE = BLOCKS.register("quark_blossom_crafting_table", () -> new VCTCraftingTableBlock(Block.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));
     
+ 	// Undergarden
+ 	public static final RegistryObject<Block> GRONGLE_CRAFTING_TABLE = BLOCKS.register("grongle_crafting_table", () -> new VCTCraftingTableBlock(Block.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));
+ 	public static final RegistryObject<Block> SMOGSTEM_CRAFTING_TABLE = BLOCKS.register("smogstem_crafting_table", () -> new VCTCraftingTableBlock(Block.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));
+ 	public static final RegistryObject<Block> WIGGLEWOOD_CRAFTING_TABLE = BLOCKS.register("wigglewood_crafting_table", () -> new VCTCraftingTableBlock(Block.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD))); 	
+ 	
     // The Wild Update (Backport)
 	public static final RegistryObject<Block> MANGROVE_CRAFTING_TABLE = BLOCKS.register("mangrove_crafting_table", () -> new VCTCraftingTableBlock(Block.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));
 
