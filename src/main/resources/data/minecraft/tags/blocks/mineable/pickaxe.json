@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "variant_crafting_tables:petrified_crafting_table"
+    "vct:petrified_crafting_table"
   ]
 }

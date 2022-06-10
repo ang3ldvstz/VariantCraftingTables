@@ -20,7 +20,7 @@ license="MIT License"
 [[mods]] #mandatory
 
 # The modid of the mod
-modId="variant_crafting_tables" #mandatory
+modId="vct" #mandatory
 
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 # ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
@@ -48,133 +48,133 @@ authors="Kitteh6660" #optional
 description='''This mod adds the variant Crafting Tables for each of the vanilla planks as well as certain mods! Also introduces Minecart with Crafting Table for on-your-go crafting needs!'''
 
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.variant_crafting_tables]] #optional
+[[dependencies.vct]] #optional
     modId="forge" #mandatory
     mandatory=true #mandatory
     versionRange="[40.0.45,)" #mandatory
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.variant_crafting_tables]]
+[[dependencies.vct]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.18.2,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.variant_crafting_tables]]
+[[dependencies.vct]]
     modId="biomesoplenty"
     mandatory=false
     versionRange="[1.18.2,)"
     ordering="AFTER"
     side="BOTH"
     
-[[dependencies.variant_crafting_tables]]
+[[dependencies.vct]]
     modId="twilightforest"
     mandatory=false
     versionRange="[1.18.2,)"
     ordering="AFTER"
     side="BOTH"
     
-[[dependencies.variant_crafting_tables]]
+[[dependencies.vct]]
     modId="atmospheric"
     mandatory=false
     versionRange="[3.0.0,)"
     ordering="AFTER"
     side="BOTH"
 
-[[dependencies.variant_crafting_tables]]
+[[dependencies.vct]]
     modId="autumnity"
     mandatory=false
     versionRange="[2.1.0,)"
     ordering="AFTER"
     side="BOTH"
 
-[[dependencies.variant_crafting_tables]]
+[[dependencies.vct]]
     modId="bamboo_blocks"
     mandatory=false
     versionRange="[3.0.0,)"
     ordering="AFTER"
     side="BOTH"
 
-[[dependencies.variant_crafting_tables]]
+[[dependencies.vct]]
     modId="buzzier_bees"
     mandatory=false
     versionRange="[3.0.0,)"
     ordering="AFTER"
     side="BOTH"
 
-[[dependencies.variant_crafting_tables]]
+[[dependencies.vct]]
     modId="endergetic"
     mandatory=false
     versionRange="[3.0.0,)"
     ordering="AFTER"
     side="BOTH"
 
-[[dependencies.variant_crafting_tables]]
+[[dependencies.vct]]
     modId="environmental"
     mandatory=false
     versionRange="[1.1.0,)"
     ordering="AFTER"
     side="BOTH"
     
-[[dependencies.variant_crafting_tables]]
+[[dependencies.vct]]
     modId="upgrade_aquatic"
     mandatory=false
     versionRange="[3.0.0,)"
     ordering="AFTER"
     side="BOTH"
     
-[[dependencies.variant_crafting_tables]]
+[[dependencies.vct]]
     modId="abundance"
     mandatory=false
     versionRange="[1.18.2,)"
     ordering="AFTER"
     side="BOTH"
     
-[[dependencies.variant_crafting_tables]]
+[[dependencies.vct]]
     modId="bayou_blues"
     mandatory=false
     versionRange="[1.18.2,)"
     ordering="AFTER"
     side="BOTH"
     
-[[dependencies.variant_crafting_tables]]
+[[dependencies.vct]]
     modId="enhanced_mushrooms"
     mandatory=false
     versionRange="[1.18.2,)"
     ordering="AFTER"
     side="BOTH"
 
-[[dependencies.variant_crafting_tables]]
+[[dependencies.vct]]
     modId="darkerdepths"
     mandatory=false
     versionRange="[1.1.0,)"
     ordering="AFTER"
     side="BOTH"
 
-[[dependencies.variant_crafting_tables]]
+[[dependencies.vct]]
     modId="habitat"
     mandatory=false
     versionRange="[1.0.1,)"
     ordering="AFTER"
     side="BOTH"
 
-[[dependencies.variant_crafting_tables]]
+[[dependencies.vct]]
     modId="outer_end"
     mandatory=false
     versionRange="[0.2,)"
     ordering="AFTER"
     side="BOTH"
     
-[[dependencies.variant_crafting_tables]]
+[[dependencies.vct]]
     modId="create"
     mandatory=false
     versionRange="[v0.4,)"
     ordering="AFTER"
     side="BOTH"
     
-[[dependencies.variant_crafting_tables]]
+[[dependencies.vct]]
     modId="ecologics"
     mandatory=false
     versionRange="[1.5.0,)"
