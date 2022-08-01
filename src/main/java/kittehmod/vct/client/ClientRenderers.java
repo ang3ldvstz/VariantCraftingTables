@@ -10,6 +10,7 @@ import net.minecraft.client.renderer.entity.MinecartRenderer;
 
 public class ClientRenderers
 {
+	@SuppressWarnings("removal")
 	public static void initialize() {
 		ItemBlockRenderTypes.setRenderLayer(VCTBlocks.GLOWSHROOM_CRAFTING_TABLE.get(), RenderType.translucent());
 		

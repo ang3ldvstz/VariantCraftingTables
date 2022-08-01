@@ -1,5 +1,8 @@
 package kittehmod.vct;
 
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
+
 import kittehmod.vct.blocks.VCTBlocks;
 import kittehmod.vct.client.ClientRenderers;
 import kittehmod.vct.entities.VCTEntities;
@@ -15,7 +18,10 @@ public class VariantCraftingTablesMod
 {
 	public static final String MOD_ID = "vct";
 	
+	//public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
+	
     public VariantCraftingTablesMod() {
+    	
     	VCTBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
     	VCTItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     	VCTEntities.ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());

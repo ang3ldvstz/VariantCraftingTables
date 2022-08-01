@@ -7,9 +7,9 @@
     "vct:jungle_crafting_table",
     "vct:acacia_crafting_table",
     "vct:dark_oak_crafting_table",
+    "vct:mangrove_crafting_table",
     "vct:crimson_crafting_table",
     "vct:warped_crafting_table",
-    "vct:mangrove_crafting_table",
     
     "vct:bop_cherry_crafting_table",
     "vct:bop_dead_crafting_table",
@@ -71,6 +71,8 @@
     "vct:petrified_crafting_table",
     
     "vct:fairy_ring_mushroom_crafting_table",
+
+    "vct:netherwood_crafting_table",
     
     "vct:azure_crafting_table",
     

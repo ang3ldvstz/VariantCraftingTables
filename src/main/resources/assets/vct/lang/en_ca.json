@@ -29,6 +29,7 @@
 "block.vct.timewood_crafting_table": "Timewood Crafting Table",
 "block.vct.transwood_crafting_table": "Transwood Crafting Table",
 "block.vct.twilight_oak_crafting_table": "Twilight Oak Crafting Table",
+"block.vct.towerwood_crafting_table": "Towerwood Crafting Table",
 
 "block.vct.aspen_crafting_table": "Aspen Crafting Table",
 "block.vct.grimwood_crafting_table": "Grimwood Crafting Table",
@@ -63,6 +64,9 @@
 
 "block.vct.twisted_crafting_table": "Twisted Crafting Table",
 
+"block.vct.ceiltrunk_crafting_table": "Ceiltrunk Crafting Table",
+"block.vct.luzawood_crafting_table": "Luzawood Crafting Table",
+
 "block.vct.petrified_crafting_table": "Petrified Crafting Table",
 
 "block.vct.eco_azalea_crafting_table": "Azalea Crafting Table",
@@ -70,7 +74,15 @@
 "block.vct.eco_coconut_crafting_table": "Coconut Crafting Table",
 "block.vct.eco_walnut_crafting_table": "Walnut Crafting Table",
 
+"block.vct.ebony_crafting_table": "Ebony Crafting Table",
+"block.vct.pream_crafting_table": "Pream Crafting Table",
+
 "block.vct.fairy_ring_mushroom_crafting_table": "Fairy Ring Mushroom Crafting Table",
+
+"block.vct.netherwood_crafting_table": "Netherwood Crafting Table",
+
+"block.vct.jaboticaba_crafting_table": "Jabuticaba Crafting Table",
+"block.vct.ramboutan_crafting_table": "Rambutan Crafting Table",
 
 "block.vct.azure_crafting_table": "Azure Crafting Table",
 
@@ -84,6 +96,10 @@
 
 "block.vct.quark_azalea_crafting_table": "Azalea Crafting Table",
 "block.vct.quark_blossom_crafting_table": "Blossom Crafting Table",
+
+"block.vct.gingerbread_crafting_table": "Gingerbread Crafting Table",
+
+"block.vct.stripped_bamboo_crafting_table": "Stripped Bamboo Crafting Table",
 
 "block.vct.grongle_crafting_table": "Grongle Crafting Table",
 "block.vct.smogstem_crafting_table": "Smogstem Crafting Table",
@@ -119,6 +135,7 @@
 "item.vct.timewood_crafting_table_minecart": "Minecart with Timewood Crafting Table",
 "item.vct.transwood_crafting_table_minecart": "Minecart with Transwood Crafting Table",
 "item.vct.twilight_oak_crafting_table_minecart": "Minecart with Twilight Oak Crafting Table",
+"item.vct.towerwood_crafting_table_minecart": "Minecart with Towerwood Crafting Table",
 
 "item.vct.aspen_crafting_table_minecart": "Minecart with Aspen Crafting Table",
 "item.vct.grimwood_crafting_table_minecart": "Minecart with Grimwood Crafting Table",
@@ -147,11 +164,17 @@
 
 "item.vct.cypress_crafting_table_minecart": "Minecart with Cypress Crafting Table",
 
+"item.vct.ebony_crafting_table_minecart": "Minecart with Ebony Crafting Table",
+"item.vct.pream_crafting_table_minecart": "Minecart with Pream Crafting Table",
+
 "item.vct.brown_mushroom_crafting_table_minecart": "Minecart with Brown Mushroom Crafting Table",
 "item.vct.red_mushroom_crafting_table_minecart": "Minecart with Red Mushroom Crafting Table",
 "item.vct.glowshroom_crafting_table_minecart": "Minecart with Glowshroom Crafting Table",
 
 "item.vct.twisted_crafting_table_minecart": "Minecart with Twisted Crafting Table",
+
+"item.vct.ceiltrunk_crafting_table_minecart": "Minecart with Ceiltrunk Crafting Table",
+"item.vct.luzawood_crafting_table_minecart": "Minecart with Luzawood Crafting Table",
 
 "item.vct.petrified_crafting_table_minecart": "Minecart with Petrified Crafting Table",
 
@@ -160,7 +183,15 @@
 "item.vct.eco_coconut_crafting_table_minecart": "Minecart with Coconut Crafting Table",
 "item.vct.eco_walnut_crafting_table_minecart": "Minecart with Walnut Crafting Table",
 
+"item.vct.ebony_crafting_table_minecart": "Minecart with Ebony Crafting Table",
+"item.vct.pream_crafting_table_minecart": "Minecart with Pream Crafting Table",
+
 "item.vct.fairy_ring_mushroom_crafting_table_minecart": "Minecart with Fairy Ring Mushroom Crafting Table",
+
+"item.vct.netherwood_crafting_table_minecart": "Minecart with Netherwood Crafting Table",
+
+"item.vct.jaboticaba_crafting_table_minecart": "Minecart with Jabuticaba Crafting Table",
+"item.vct.ramboutan_crafting_table_minecart": "Minecart with Rambutan Crafting Table",
 
 "item.vct.azure_crafting_table_minecart": "Minecart with Azure Crafting Table",
 
@@ -174,6 +205,10 @@
 
 "item.vct.quark_azalea_crafting_table_minecart": "Minecart with Azalea Crafting Table",
 "item.vct.quark_blossom_crafting_table_minecart": "Minecart with Blossom Crafting Table",
+
+"item.vct.gingerbread_crafting_table_minecart": "Minecart with Gingerbread Crafting Table",
+
+"item.vct.stripped_bamboo_crafting_table_minecart": "Minecart with Stripped Bamboo Crafting Table",
 
 "item.vct.grongle_crafting_table_minecart": "Minecart with Grongle Crafting Table",
 "item.vct.smogstem_crafting_table_minecart": "Minecart with Smogstem Crafting Table",
