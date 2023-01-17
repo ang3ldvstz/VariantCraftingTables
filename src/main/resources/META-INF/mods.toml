@@ -8,7 +8,7 @@
 modLoader="javafml" #mandatory
 
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="[41,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+loaderVersion="[43,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
 # The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
 # Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
 license="MIT License"
@@ -51,14 +51,14 @@ description='''This mod adds the variant Crafting Tables for each of the vanilla
 [[dependencies.vct]] #optional
     modId="forge" #mandatory
     mandatory=true #mandatory
-    versionRange="[41.1.0,)" #mandatory
+    versionRange="[43.1.61,)" #mandatory
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.vct]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19,)"
+    versionRange="[1.19.2,1.19.3)"
     ordering="NONE"
     side="BOTH"
 
@@ -182,6 +182,13 @@ description='''This mod adds the variant Crafting Tables for each of the vanilla
     side="BOTH"
     
 [[dependencies.variant_crafting_tables]]
+    modId="enlightened_end"
+    mandatory=false
+    versionRange="[3.0.0,)"
+    ordering="AFTER"
+    side="BOTH"
+    
+[[dependencies.variant_crafting_tables]]
     modId="nethers_exoticism"
     mandatory=false
     versionRange="[1.1.8,)"
@@ -206,5 +213,12 @@ description='''This mod adds the variant Crafting Tables for each of the vanilla
     modId="ecologics"
     mandatory=false
     versionRange="[1.6.0,)"
+    ordering="AFTER"
+    side="BOTH"
+    
+[[dependencies.vct]]
+    modId="forbidden_arcanus"
+    mandatory=false
+    versionRange="[1.19.2,)"
     ordering="AFTER"
     side="BOTH"

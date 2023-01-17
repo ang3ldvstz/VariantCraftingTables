@@ -2,14 +2,14 @@
   "parent": "vct:recipes/root",
   "rewards": {
     "recipes": [
-      "vct:stripped_bark_crafting_table_minecart"
+      "vct:fiss_azalea_crafting_table_minecart"
     ]
   },
   "criteria": {
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "vct:stripped_bark_crafting_table_minecart"
+        "recipe": "vct:fiss_azalea_crafting_table_minecart"
       }
     },
     "has_items": {
@@ -35,7 +35,7 @@
   "conditions": [
     {
       "type": "forge:mod_loaded",
-      "modid": "twigs"
+      "modid": "colorfulazaleas"
     }
   ]
 }

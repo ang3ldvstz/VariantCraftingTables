@@ -13,6 +13,7 @@ public class ClientRenderers
 	@SuppressWarnings("removal")
 	public static void initialize() {
 		ItemBlockRenderTypes.setRenderLayer(VCTBlocks.GLOWSHROOM_CRAFTING_TABLE.get(), RenderType.translucent());
+		ItemBlockRenderTypes.setRenderLayer(VCTBlocks.SELDGE_CRAFTING_TABLE.get(), RenderType.translucent());
 		
 		EntityRenderers.register(VCTEntities.CRAFTING_TABLE_MINECART.get(), (entity) -> { return new MinecartRenderer<>(entity, ModelLayers.MINECART); });
 

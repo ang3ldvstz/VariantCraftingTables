@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.BaseRailBlock;
 import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.RailShape;
+import net.minecraft.world.level.gameevent.GameEvent;
 
 public class CraftingTableMinecartItem extends Item
 {
@@ -101,31 +102,32 @@ public class CraftingTableMinecartItem extends Item
 	 * Called when this item is used when targetting a Block
 	 */
 	public InteractionResult useOn(UseOnContext context) {
-		Level world = context.getLevel();
+		Level level = context.getLevel();
 		BlockPos blockpos = context.getClickedPos();
-		BlockState blockstate = world.getBlockState(blockpos);
+		BlockState blockstate = level.getBlockState(blockpos);
 		if (!blockstate.is(BlockTags.RAILS)) {
 			return InteractionResult.FAIL;
 		} else {
 			ItemStack itemstack = context.getItemInHand();
-			if (!world.isClientSide) {
-				RailShape railshape = blockstate.getBlock() instanceof BaseRailBlock ? ((BaseRailBlock) blockstate.getBlock()).getRailDirection(blockstate, world, blockpos, null) : RailShape.NORTH_SOUTH;
+			if (!level.isClientSide) {
+				RailShape railshape = blockstate.getBlock() instanceof BaseRailBlock ? ((BaseRailBlock) blockstate.getBlock()).getRailDirection(blockstate, level, blockpos, null) : RailShape.NORTH_SOUTH;
 				double d0 = 0.0D;
 				if (railshape.isAscending()) {
 					d0 = 0.5D;
 				}
 
-				MinecartCraftingTable minecartentity = new MinecartCraftingTable(world, (double) blockpos.getX() + 0.5D, (double) blockpos.getY() + 0.0625D + d0, (double) blockpos.getZ() + 0.5D);
+				MinecartCraftingTable minecartentity = new MinecartCraftingTable(level, (double) blockpos.getX() + 0.5D, (double) blockpos.getY() + 0.0625D + d0, (double) blockpos.getZ() + 0.5D);
 				minecartentity.setCraftingTableType(this.craftingTableType);
 				if (itemstack.hasCustomHoverName()) {
 					minecartentity.setCustomName(itemstack.getDisplayName());
 				}
 
-				world.addFreshEntity(minecartentity);
+				level.addFreshEntity(minecartentity);
+				level.gameEvent(GameEvent.ENTITY_PLACE, blockpos, GameEvent.Context.of(context.getPlayer(), level.getBlockState(blockpos.below())));
 			}
 
 			itemstack.shrink(1);
-			return InteractionResult.sidedSuccess(world.isClientSide);
+			return InteractionResult.sidedSuccess(level.isClientSide);
 		}
 	}
 }
