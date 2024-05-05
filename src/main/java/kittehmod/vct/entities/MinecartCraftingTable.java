@@ -6,6 +6,7 @@ import kittehmod.vct.container.MinecartCraftingMenu;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -13,6 +14,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -46,7 +48,7 @@ public class MinecartCraftingTable extends AbstractMinecartContainer
 		InteractionResult ret = super.interact(player, hand);
 		if (ret.consumesAction()) return ret;
 		player.openMenu(this);
-		if (!player.level.isClientSide) {
+		if (!player.level().isClientSide) {
 			return InteractionResult.CONSUME;
 		} else {
 			return InteractionResult.SUCCESS;
@@ -73,7 +75,7 @@ public class MinecartCraftingTable extends AbstractMinecartContainer
 	}
 
 	public AbstractContainerMenu createMenu(int cid, Inventory playerInventoryIn) {
-		return new MinecartCraftingMenu(cid, playerInventoryIn, ContainerLevelAccess.create(this.level, this.blockPosition()), this);
+		return new MinecartCraftingMenu(cid, playerInventoryIn, ContainerLevelAccess.create(this.level(), this.blockPosition()), this);
 	}
 
 	@Override
@@ -96,21 +98,21 @@ public class MinecartCraftingTable extends AbstractMinecartContainer
 		return 0;
 	}
 	
-	public Packet<?> getAddEntityPacket() {
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
 	@Override
 	public void destroy(DamageSource source) {
 		this.kill();
-		if (this.level.getGameRules().getBoolean(GameRules.RULE_DOENTITYDROPS)) {
+		if (this.level().getGameRules().getBoolean(GameRules.RULE_DOENTITYDROPS)) {
 			ItemStack itemstack = new ItemStack(this.getDropItem());
 			if (this.hasCustomName()) {
 				itemstack.setHoverName(this.getCustomName());
 			}
 			this.spawnAtLocation(itemstack);
 		}
-		if (!source.isExplosion() && this.level.getGameRules().getBoolean(GameRules.RULE_DOENTITYDROPS)) {
+		if (!source.is(DamageTypes.EXPLOSION) && this.level().getGameRules().getBoolean(GameRules.RULE_DOENTITYDROPS)) {
 			this.spawnAtLocation(this.getDisplayBlockState().getBlock());
 		}
 	}
@@ -160,8 +162,10 @@ public class MinecartCraftingTable extends AbstractMinecartContainer
 		CRIMSON(VCTBlocks.CRIMSON_CRAFTING_TABLE.get()),
 		WARPED(VCTBlocks.WARPED_CRAFTING_TABLE.get()),
 		MANGROVE(VCTBlocks.MANGROVE_CRAFTING_TABLE.get()),
+		BAMBOO(VCTBlocks.BAMBOO_CRAFTING_TABLE.get()),
+		CHERRY(VCTBlocks.CHERRY_CRAFTING_TABLE.get()),
 		// Biomes o' Plenty
-		BOP_CHERRY(VCTBlocks.BOP_CHERRY_CRAFTING_TABLE.get()),
+		//BOP_CHERRY(VCTBlocks.BOP_CHERRY_CRAFTING_TABLE.get()),
 		BOP_DEAD(VCTBlocks.BOP_DEAD_CRAFTING_TABLE.get()),
 		BOP_FIR(VCTBlocks.BOP_FIR_CRAFTING_TABLE.get()),
 		BOP_HELLBARK(VCTBlocks.BOP_HELLBARK_CRAFTING_TABLE.get()),
@@ -190,10 +194,9 @@ public class MinecartCraftingTable extends AbstractMinecartContainer
 		ROSEWOOD(VCTBlocks.ROSEWOOD_CRAFTING_TABLE.get()),
 		YUCCA(VCTBlocks.YUCCA_CRAFTING_TABLE.get()),
 		MAPLE(VCTBlocks.MAPLE_CRAFTING_TABLE.get()),
-		BAMBOO(VCTBlocks.BAMBOO_CRAFTING_TABLE.get()),
 		AZALEA(VCTBlocks.AZALEA_CRAFTING_TABLE.get()),
 		POISE(VCTBlocks.POISE_CRAFTING_TABLE.get()),
-		CHERRY(VCTBlocks.CHERRY_CRAFTING_TABLE.get()),
+		DARK_CHERRY(VCTBlocks.DARK_CHERRY_CRAFTING_TABLE.get()),
 		WILLOW(VCTBlocks.WILLOW_CRAFTING_TABLE.get()),
 		WISTERIA(VCTBlocks.WISTERIA_CRAFTING_TABLE.get()),
 		DRIFTWOOD(VCTBlocks.DRIFTWOOD_CRAFTING_TABLE.get()),
@@ -204,7 +207,6 @@ public class MinecartCraftingTable extends AbstractMinecartContainer
 		CYPRESS(VCTBlocks.CYPRESS_CRAFTING_TABLE.get()),
 		BROWN_MUSHROOM(VCTBlocks.BROWN_MUSHROOM_CRAFTING_TABLE.get()),
 		RED_MUSHROOM(VCTBlocks.RED_MUSHROOM_CRAFTING_TABLE.get()),
-		GLOWSHROOM(VCTBlocks.GLOWSHROOM_CRAFTING_TABLE.get()),
 		// Prehistoric Fauna
 		ARAUCARIA(VCTBlocks.ARAUCARIA_CRAFTING_TABLE.get()),
 		HEIDIPHYLLUM(VCTBlocks.HEIDIPHYLLUM_CRAFTING_TABLE.get()),
@@ -241,25 +243,44 @@ public class MinecartCraftingTable extends AbstractMinecartContainer
 		// End's Phantasm
 		EBONY(VCTBlocks.EBONY_CRAFTING_TABLE.get()),
 		PREAM(VCTBlocks.PREAM_CRAFTING_TABLE.get()),
+		// Endless Biomes
+		PENUMBRA(VCTBlocks.PENUMBRA_CRAFTING_TABLE.get()),
+		TWISTED(VCTBlocks.TWISTED_CRAFTING_TABLE.get()),		
 		// Enlightened End
-		//CERULEAN(VCTBlocks.CERULEAN_CRAFTING_TABLE.get()),
-		//COSMIC(VCTBlocks.COSMIC_CRAFTING_TABLE.get()),
-		SELDGE(VCTBlocks.SELDGE_CRAFTING_TABLE.get()),
-		//STALK(VCTBlocks.STALK_CRAFTING_TABLE.get()),
+		CONGEALED(VCTBlocks.CONGEALED_CRAFTING_TABLE.get()),
 		VERDANT(VCTBlocks.VERDANT_CRAFTING_TABLE.get()),
+		// Extended Mushrooms
+		MUSHROOM(VCTBlocks.MUSHROOM_CRAFTING_TABLE.get()),
+		POISONOUS_MUSHROOM(VCTBlocks.POISONOUS_MUSHROOM_CRAFTING_TABLE.get()),
+		HONEY_FUNGUS(VCTBlocks.HONEY_FUNGUS_CRAFTING_TABLE.get()),
+		GLOWSHROOM(VCTBlocks.GLOWSHROOM_CRAFTING_TABLE.get()),
 		// Forbidden & Arcanus
 		ARCANE_EDELWOOD(VCTBlocks.ARCANE_EDELWOOD_CRAFTING_TABLE.get()),
 		CHERRYWOOD(VCTBlocks.CHERRYWOOD_CRAFTING_TABLE.get()),
 		EDELWOOD(VCTBlocks.EDELWOOD_CRAFTING_TABLE.get()),
 		FUNGYSS(VCTBlocks.FUNGYSS_CRAFTING_TABLE.get()),
-		MYSTERYWOOD(VCTBlocks.MYSTERYWOOD_CRAFTING_TABLE.get()),
+		AURUM(VCTBlocks.AURUM_CRAFTING_TABLE.get()),
+		// Fruit Trees
+		FT_CHERRY(VCTBlocks.FT_CHERRY_CRAFTING_TABLE.get()),
+		FT_CITRUS(VCTBlocks.FT_CITRUS_CRAFTING_TABLE.get()),				
+		// Gardens of the Dead
+		SOULBLIGHT(VCTBlocks.SOULBLIGHT_CRAFTING_TABLE.get()),
+		WHISTLECANE(VCTBlocks.WHISTLECANE_CRAFTING_TABLE.get()),		
+		// Good Ending
+		GE_CYPRESS(VCTBlocks.GE_CYPRESS_CRAFTING_TABLE.get()),
+		GE_MUDDY_OAK(VCTBlocks.GE_MUDDY_OAK_CRAFTING_TABLE.get()),		
 		// Hexerei
 		HEXEREI_MAHOGANY(VCTBlocks.HEXEREI_MAHOGANY_CRAFTING_TABLE.get()),
 		HEXEREI_WILLOW(VCTBlocks.HEXEREI_WILLOW_CRAFTING_TABLE.get()),
+		HEXEREI_WITCH_HAZEL(VCTBlocks.HEXEREI_WITCH_HAZEL_CRAFTING_TABLE.get()),
 		// Malum
 		RUNEWOOD(VCTBlocks.RUNEWOOD_CRAFTING_TABLE.get()),
 		SOULWOOD(VCTBlocks.SOULWOOD_CRAFTING_TABLE.get()),
+		// Pyromancy
+		PYROWOOD(VCTBlocks.PYROWOOD_CRAFTING_TABLE.get()),
+		ROTTEN_PLANKS(VCTBlocks.ROTTEN_PLANKS_CRAFTING_TABLE.get()),
 		// Quark
+		QUARK_ANCIENT(VCTBlocks.QUARK_ANCIENT_CRAFTING_TABLE.get()),
 		QUARK_AZALEA(VCTBlocks.QUARK_AZALEA_CRAFTING_TABLE.get()),
 		QUARK_BLOSSOM(VCTBlocks.QUARK_BLOSSOM_CRAFTING_TABLE.get()),		
 		// Undergarden
@@ -269,6 +290,22 @@ public class MinecartCraftingTable extends AbstractMinecartContainer
 		// Nether's Exoticism
 		JABOTICABA(VCTBlocks.JABOTICABA_CRAFTING_TABLE.get()),
 		RAMBOUTAN(VCTBlocks.RAMBOUTAN_CRAFTING_TABLE.get()),
+		// Regions Unexplored
+		RUE_BAOBAB(VCTBlocks.RUE_BAOBAB_CRAFTING_TABLE.get()),
+		RUE_BLACKWOOD(VCTBlocks.RUE_BLACKWOOD_CRAFTING_TABLE.get()),
+		RUE_BRIMWOOD(VCTBlocks.RUE_BRIMWOOD_CRAFTING_TABLE.get()),
+		RUE_CHERRY(VCTBlocks.RUE_CHERRY_CRAFTING_TABLE.get()),
+		RUE_CYPRESS(VCTBlocks.RUE_CYPRESS_CRAFTING_TABLE.get()),
+		RUE_DEAD(VCTBlocks.RUE_DEAD_CRAFTING_TABLE.get()),
+		RUE_EUCALYPTUS(VCTBlocks.RUE_EUCALYPTUS_CRAFTING_TABLE.get()),
+		RUE_JOSHUA(VCTBlocks.RUE_JOSHUA_CRAFTING_TABLE.get()),
+		RUE_LARCH(VCTBlocks.RUE_LARCH_CRAFTING_TABLE.get()),
+		RUE_MAPLE(VCTBlocks.RUE_MAPLE_CRAFTING_TABLE.get()),
+		RUE_MAUVE(VCTBlocks.RUE_MAUVE_CRAFTING_TABLE.get()),
+		RUE_PALM(VCTBlocks.RUE_PALM_CRAFTING_TABLE.get()),
+		RUE_PINE(VCTBlocks.RUE_PINE_CRAFTING_TABLE.get()),
+		RUE_REDWOOD(VCTBlocks.RUE_REDWOOD_CRAFTING_TABLE.get()),
+		RUE_WILLOW(VCTBlocks.RUE_WILLOW_CRAFTING_TABLE.get()),
 		// Tinkers Construct
 		BLOODSHROOM(VCTBlocks.BLOODSHROOM_CRAFTING_TABLE.get()),
 		GREENHEART(VCTBlocks.GREENHEART_CRAFTING_TABLE.get()),
@@ -278,18 +315,23 @@ public class MinecartCraftingTable extends AbstractMinecartContainer
 		HOLLY(VCTBlocks.HOLLY_CRAFTING_TABLE.get()),
 		// Miscellaneous (Mods that only add 1 wood type)
 		ASH(VCTBlocks.ASH_CRAFTING_TABLE.get()),
+		GOURDROT(VCTBlocks.GOURDROT_CRAFTING_TABLE.get()),
+		AETHER_SKYROOT(VCTBlocks.AETHER_SKYROOT_CRAFTING_TABLE.get()),
 		WALNUT(VCTBlocks.WALNUT_CRAFTING_TABLE.get()),
+		APRICORN(VCTBlocks.APRICORN_CRAFTING_TABLE.get()),
 		AZURE(VCTBlocks.AZURE_CRAFTING_TABLE.get()),
 		ECHO(VCTBlocks.ECHO_CRAFTING_TABLE.get()),
 		FAIRY_RING_MUSHROOM(VCTBlocks.FAIRY_RING_MUSHROOM_CRAFTING_TABLE.get()),
-		AKASHIC(VCTBlocks.AKASHIC_CRAFTING_TABLE.get()),
+		EDIFIED(VCTBlocks.EDIFIED_CRAFTING_TABLE.get()),
+		MENRIL(VCTBlocks.MENRIL_CRAFTING_TABLE.get()),
 		NETHERWOOD(VCTBlocks.NETHERWOOD_CRAFTING_TABLE.get()),
 		SG_NETHERWOOD(VCTBlocks.SG_NETHERWOOD_CRAFTING_TABLE.get()),
 		FIR(VCTBlocks.FIR_CRAFTING_TABLE.get()),
 		PETRIFIED(VCTBlocks.PETRIFIED_CRAFTING_TABLE.get()),
 		GINGERBREAD(VCTBlocks.GINGERBREAD_CRAFTING_TABLE.get()),
 		STRIPPED_BAMBOO(VCTBlocks.STRIPPED_BAMBOO_CRAFTING_TABLE.get()),
-		TWISTED(VCTBlocks.TWISTED_CRAFTING_TABLE.get());
+		AP_TWISTED(VCTBlocks.AP_TWISTED_CRAFTING_TABLE.get()),
+		ARCHWOOD(VCTBlocks.ARCHWOOD_CRAFTING_TABLE.get());
 		
 		private final Block block;
 		private final String name;

@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+	    "particle": "cobblemon:blocks/apricorn_planks",
+        "down": "cobblemon:blocks/apricorn_planks",
+        "up": "vct:block/apricorn_crafting_table_top",
+        "north": "vct:block/apricorn_crafting_table_front",
+        "east": "vct:block/apricorn_crafting_table_side",
+        "south": "vct:block/apricorn_crafting_table_side",
+        "west": "vct:block/apricorn_crafting_table_front"
+	}
+}

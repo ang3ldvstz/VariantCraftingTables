@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "vct:bop_cherry_crafting_table",
     "vct:bop_dead_crafting_table",
     "vct:bop_fir_crafting_table",
     "vct:bop_hellbark_crafting_table",

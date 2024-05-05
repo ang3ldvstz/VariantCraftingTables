@@ -1,8 +1,8 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-	    "particle": "environmental:block/cherry_planks",
-        "down": "environmental:block/cherry_planks",
+	    "particle": "minecraft:block/cherry_planks",
+        "down": "minecraft:block/cherry_planks",
         "up": "vct:block/cherry_crafting_table_top",
         "north": "vct:block/cherry_crafting_table_front",
         "east": "vct:block/cherry_crafting_table_side",

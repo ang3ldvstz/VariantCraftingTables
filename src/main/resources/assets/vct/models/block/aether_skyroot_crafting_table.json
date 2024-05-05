@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+	    "particle": "aether:block/construction/skyroot_planks",
+        "down": "aether:block/construction/skyroot_planks",
+        "up": "vct:block/aether_skyroot_crafting_table_top",
+        "north": "vct:block/aether_skyroot_crafting_table_front",
+        "east": "vct:block/aether_skyroot_crafting_table_side",
+        "south": "vct:block/aether_skyroot_crafting_table_side",
+        "west": "vct:block/aether_skyroot_crafting_table_front"
+	}
+}

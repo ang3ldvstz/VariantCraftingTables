@@ -16,11 +16,5 @@
   "result": {
     "item": "vct:bamboo_crafting_table_minecart",
     "count": 1
-  },
-  "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "bamboo_blocks"
-    }
-  ]
+  }
 }

@@ -1,8 +1,8 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-	    "particle": "architects_palette:block/twisted_planks",
-        "down": "architects_palette:block/twisted_planks",
+	    "particle": "endlessbiomes:blocks/twistedplanksnewnew",
+        "down": "endlessbiomes:blocks/twistedplanksnewnew",
         "up": "vct:block/twisted_crafting_table_top",
         "north": "vct:block/twisted_crafting_table_front",
         "east": "vct:block/twisted_crafting_table_side",

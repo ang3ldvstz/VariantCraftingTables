@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "items": [ "bamboo_blocks:bamboo_planks" ]
+            "items": [ "minecraft:bamboo_planks" ]
           }
         ]
       }
@@ -28,11 +28,5 @@
       "has_the_recipe",
       "has_items"
     ]
-  ],
-  "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "bamboo_blocks"
-    }
   ]
 }

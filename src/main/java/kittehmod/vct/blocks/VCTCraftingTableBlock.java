@@ -1,5 +1,6 @@
 package kittehmod.vct.blocks;
 
+import kittehmod.vct.VCTTags;
 import kittehmod.vct.container.VCTCraftingMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -14,8 +15,8 @@ import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.CraftingTableBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.BlockHitResult;
 
 public class VCTCraftingTableBlock extends CraftingTableBlock
@@ -50,7 +51,7 @@ public class VCTCraftingTableBlock extends CraftingTableBlock
     
     @Override
     public int getFlammability(BlockState state, BlockGetter getter, BlockPos pos, Direction face) {
-    	if (this.material == Material.WOOD) {
+    	if (this.defaultBlockState().is(VCTTags.CRAFTING_TABLES) && this.soundType != SoundType.NETHER_WOOD) {
     		return 20;
     	}
     	else {
@@ -60,7 +61,7 @@ public class VCTCraftingTableBlock extends CraftingTableBlock
     
     @Override
     public int getFireSpreadSpeed(BlockState state, BlockGetter getter, BlockPos pos, Direction face) {
-    	if (this.material == Material.WOOD) {
+    	if (this.defaultBlockState().is(VCTTags.CRAFTING_TABLES) && this.soundType != SoundType.NETHER_WOOD) {
     		return 5;
     	}
     	else {

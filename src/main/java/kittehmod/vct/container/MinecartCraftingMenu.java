@@ -10,10 +10,11 @@ import net.minecraft.world.inventory.CraftingMenu;
 import net.minecraft.world.inventory.ResultContainer;
 import net.minecraft.world.inventory.ResultSlot;
 import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.inventory.TransientCraftingContainer;
 
 public class MinecartCraftingMenu extends CraftingMenu
 {
-	private final CraftingContainer craftSlots = new CraftingContainer(this, 3, 3);
+	private final CraftingContainer craftSlots = new TransientCraftingContainer(this, 3, 3);
 	private final ResultContainer resultSlots = new ResultContainer();
 	private final MinecartCraftingTable entity;
 
@@ -48,6 +49,6 @@ public class MinecartCraftingMenu extends CraftingMenu
 	 */
 	@Override
 	public boolean stillValid(Player playerIn) {
-		return playerIn.distanceTo(this.entity) <= (ForgeMod.REACH_DISTANCE.isPresent() ? playerIn.getAttributeValue(ForgeMod.REACH_DISTANCE.get()) : 5);
+		return playerIn.distanceTo(this.entity) <= (ForgeMod.ENTITY_REACH.isPresent() ? playerIn.getAttributeValue(ForgeMod.ENTITY_REACH.get()) : 5);
 	}
 }

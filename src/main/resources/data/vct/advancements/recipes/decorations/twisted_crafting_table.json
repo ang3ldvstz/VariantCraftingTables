@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "items": [ "architects_palette:twisted_planks" ]
+            "items": [ "endlessbiomes:twisted_planks" ]
           }
         ]
       }
@@ -32,7 +32,7 @@
   "conditions": [
     {
       "type": "forge:mod_loaded",
-      "modid": "architects_palette"
+      "modid": "endlessbiomes"
     }
   ]
 }
