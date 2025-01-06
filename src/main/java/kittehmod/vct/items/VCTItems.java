@@ -422,7 +422,7 @@ public class VCTItems
 	public static final RegistryObject<Item> RUE_BAOBAB_CRAFTING_TABLE = ITEMS.register("rue_baobab_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.RUE_BAOBAB_CRAFTING_TABLE.get(), new Item.Properties()));
 	public static final RegistryObject<Item> RUE_BLACKWOOD_CRAFTING_TABLE = ITEMS.register("rue_blackwood_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.RUE_BLACKWOOD_CRAFTING_TABLE.get(), new Item.Properties()));
 	public static final RegistryObject<Item> RUE_BRIMWOOD_CRAFTING_TABLE = ITEMS.register("rue_brimwood_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.RUE_BRIMWOOD_CRAFTING_TABLE.get(), new Item.Properties()));
-	public static final RegistryObject<Item> RUE_CHERRY_CRAFTING_TABLE = ITEMS.register("rue_cherry_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.RUE_CHERRY_CRAFTING_TABLE.get(), new Item.Properties()));
+	public static final RegistryObject<Item> RUE_MAGNOLIA_CRAFTING_TABLE = ITEMS.register("rue_magnolia_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.RUE_MAGNOLIA_CRAFTING_TABLE.get(), new Item.Properties()));
 	public static final RegistryObject<Item> RUE_CYPRESS_CRAFTING_TABLE = ITEMS.register("rue_cypress_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.RUE_CYPRESS_CRAFTING_TABLE.get(), new Item.Properties()));
 	public static final RegistryObject<Item> RUE_DEAD_CRAFTING_TABLE = ITEMS.register("rue_dead_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.RUE_DEAD_CRAFTING_TABLE.get(), new Item.Properties()));
 	public static final RegistryObject<Item> RUE_EUCALYPTUS_CRAFTING_TABLE = ITEMS.register("rue_eucalyptus_crafting_table", () -> new VCTCraftingTableItem(VCTBlocks.RUE_EUCALYPTUS_CRAFTING_TABLE.get(), new Item.Properties()));
